@@ -1,0 +1,7 @@
+<h1>rocke</h1>
+<div >
+    <div ng-repeat="(name,path) in paths">
+        {{name}}  <a href="files/{{ path | escape }}">hu!</a>
+        <p><audio src="{{path | urlencode}}" controls >oups</audio></p>
+    </div>
+</div>
