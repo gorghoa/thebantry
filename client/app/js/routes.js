@@ -1,8 +1,7 @@
 'use strict';
 
-define(['angular', 'app'], function(angular, app) {
+angular.module('bantry').config(['$routeProvider', function($routeProvider) {
 
-	return app.config(['$routeProvider', function($routeProvider) {
 		$routeProvider.when('/', {
 			templateUrl: 'app/partials/index.html',
 			controller: 'index'
@@ -11,7 +10,6 @@ define(['angular', 'app'], function(angular, app) {
 			templateUrl: 'app/partials/sessionDetail.html',
 			controller: 'sessionDetail'
 		});
-		$routeProvider.otherwise({redirectTo: '/view1'});
-	}]);
+		//$routeProvider.otherwise({redirectTo: '/view1'});
+}]);
 
-});

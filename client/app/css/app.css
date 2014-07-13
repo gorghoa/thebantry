@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin-bottom: 3em; }
+
+header {
+  padding: 1em;
+  background: #000;
+  color: #FFF;
+  font-size: 0.3em; }
+  header a, header a:visited {
+    color: #FFF; }
+
+#player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2em;
+  background: #123;
+  color: #FFF;
+  text-align: right; }
+
+em {
+  color: #AAA; }
+
+.session-song {
+  margin: 1em; }
+
+.session-song-controls img {
+  height: 1em;
+  cursor: pointer; }
+
+.click-to-edit {
+  display: inline-block; }
+  .click-to-edit .edit {
+    font-size: small;
+    color: blue; }
+  .click-to-edit .save {
+    color: green; }
+  .click-to-edit .cancel {
+    color: red; }

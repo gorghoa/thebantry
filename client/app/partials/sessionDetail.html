@@ -1,0 +1,13 @@
+{{session.metadata.band}}
+<div id="player">
+     <strong>{{song.metadata.title}}</strong>, {{song.metadata.artist}} <em>{{song.filename}}</em>
+    <audio controls  autoplay ng-src="{{song.url}}">oups</audio>
+</div>
+<div >
+    <div ng-repeat="file in session.files | orderBy:'metadata.track'" ng-controller="SongController" class="session-song" >
+
+        {{file.metadata.track}}
+        <span class="session-song-controls"><img ng-src="{{ 'play' | playpause }}" title="play" ng-click="$parent.changeAudioSong(file)" /></span>
+        <div click-to-edit="file.metadata.title" ></div> <em class="sessions-song-filename">({{file.filename}})</em>
+    </div>
+</div>
