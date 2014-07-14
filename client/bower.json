@@ -16,9 +16,10 @@
     "angular-route": "~1.2.1",
     "angular-scenario": "~1.2.1",
     "angular-mocks": "~1.2.1",
-    "angular-resource" : "~1.2.x",
+    "angular-resource": "~1.2.x",
     "requirejs": "~2.1.9",
     "requirejs-text": "~2.0.10",
-    "html5-boilerplate": "~4.3.0"
+    "html5-boilerplate": "~4.3.0",
+    "moment": "~2.7.0"
   }
 }

@@ -5,9 +5,13 @@
 </div>
 <div >
     <div ng-repeat="file in session.files | orderBy:'metadata.track'" ng-controller="SongController" class="session-song" >
-
         {{file.metadata.track}}
         <span class="session-song-controls"><img ng-src="{{ 'play' | playpause }}" title="play" ng-click="$parent.changeAudioSong(file)" /></span>
-        <div click-to-edit="file.metadata.title" ></div> <em class="sessions-song-filename">({{file.filename}})</em>
+        <div ng-click="showMetadata=!showMetadata" click-to-edit="file.metadata.title" >
+        </div>  <em class="sessions-song-filename">({{file.filename}})</em>
+{{file.format.duration | duration }}
+        <div class="animate-show" ng-show="showMetadata">
+            <pre>{{file.metadata}}</pre>
+        </div>
     </div>
 </div>

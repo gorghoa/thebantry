@@ -10,6 +10,15 @@ angular.module('bantry.filters', [])
 			};
 	}])
 
+    .filter('duration',[function() {
+
+        return function(seconds) {
+               return moment() .startOf('day')
+                        .seconds(seconds)
+                        .format('H:mm:ss');
+                };
+    }])
+
     .filter('playpause', [function() {
 			return function(text) {
                 switch(text) {

@@ -16,8 +16,8 @@ app.use(bodyParser.json())
 
 var sessions_store = {};
 
-var DATA_DIR = '/media/docs/data';
-var DATA_PATH = __dirname+'/'+DATA_DIR;
+var DATA_DIR = '/home/ruth/bantrydata';
+var DATA_PATH = DATA_DIR;
 
 app.listen(8000);
 
@@ -86,7 +86,7 @@ var sessions = [];
 })();
 
 app.use(express.static(__dirname+'/../client'));
-app.use('/data',express.static(__dirname+'/data'));
+app.use('/data',express.static(DATA_PATH));
 
 app.get('/sessions',function(req,res) {
     res.type('application/json');
